@@ -1,8 +1,6 @@
 <div align="center">
 
-# MCP for Blender
-
-**Connect Blender to any LLM**
+<img src="assets/logo-banner.svg" alt="MCP for Blender — Connect Blender to any LLM" width="480" />
 
 *formerly `blender-mcp` — the PyPI package is now [`mcp-for-blender`](https://pypi.org/project/mcp-for-blender/).*
 *Existing setups keep working; no config change is required. [Read more](https://github.com/ahujasid/mcp-for-blender/issues/366)*
@@ -671,6 +669,14 @@ International credentials sent to the mainland endpoint fail with `AuthFailure.S
 `ResourceUnavailable`, so tick the toggle when your SecretId/SecretKey come from tencentcloud.com.
 The toggle sits under **Tencent Hunyuan 3D → Official API** in the sidebar.
 
+#### Tripo
+
+[Tripo](https://www.tripo3d.ai/) generates textured 3D models from a text prompt or a reference image.
+It runs through [Premium](#premium) with no key, or on your own Tripo API key.
+Through Premium, text uses your default quality and an image counts as one high-quality generation.
+[Get a Tripo API key](https://developers.tripo3d.ai/en/keys).
+Tick **Tripo** under **AI Model Generation** in the sidebar, choose a **Model**, and paste the key.
+
 #### Meshy
 
 [Meshy](https://www.meshy.ai/) generates textured 3D models from a text prompt or a reference image,
@@ -762,6 +768,7 @@ Here are some examples of what you can ask Claude to do:
 | *"Get information about the current scene, and make a threejs sketch from it"* | [Watch](https://www.youtube.com/watch?v=jxbNI5L7AH8) |
 | *"Generate a 3D model of a garden gnome through Hyper3D"* | |
 | *"Generate a wooden rocking chair with Meshy"* | |
+| *"Generate a ceramic teapot with Tripo"* | |
 | *"Fill this room with low-poly furniture from Poly Pizza"* | |
 | *"Make this car red and metallic"* | |
 | *"Create a sphere and place it above the cube"* | |
@@ -784,6 +791,7 @@ You can store these values there so they survive Blender restarts:
 - Hunyuan3D SecretId / SecretKey
 - Hunyuan3D API URL
 - Meshy API Key
+- Tripo API Key
 
 For headless setups or CI, credentials can also be injected by environment variables:
 
@@ -796,6 +804,7 @@ For headless setups or CI, credentials can also be injected by environment varia
 | `BLENDERMCP_HUNYUAN3D_SECRET_KEY` |
 | `BLENDERMCP_HUNYUAN3D_API_URL` |
 | `BLENDERMCP_MESHY_API_KEY` |
+| `BLENDERMCP_TRIPO_API_KEY` |
 
 ---
 
